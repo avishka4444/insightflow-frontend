@@ -3,12 +3,12 @@ import AppBar from "../components/AppBar";
 
 const MainLayout = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <AppBar />
-      <main className="mt-20">
+      <main className="pt-14">
         <Outlet />
       </main>
-    </>
+    </div>
   );
 };
 

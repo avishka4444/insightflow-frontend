@@ -5,7 +5,7 @@ export default function AppBar() {
   const selectedKey = location.pathname === "/" ? "/" : location.pathname;
 
   const linkBase = "inline-flex items-center h-full px-3 rounded-md text-sm font-medium transition-colors hover:bg-transparent focus:bg-transparent active:bg-transparent focus:outline-none focus-visible:outline-none ring-0 focus:ring-0";
-  const linkInactive = "text-white hover:text-blue-600";
+  const linkInactive = "text-gray-700 hover:text-blue-600";
   const linkActive = "text-blue-600";
 
   return (
@@ -35,6 +35,14 @@ export default function AppBar() {
                   className={`${linkBase} ${selectedKey === "/about" ? linkActive : linkInactive}`}
                 >
                   About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/organizations"
+                  className={`${linkBase} ${selectedKey === "/organizations" ? linkActive : linkInactive}`}
+                >
+                  Organizations
                 </Link>
               </li>
             </ul>
